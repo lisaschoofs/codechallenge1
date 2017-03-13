@@ -5,6 +5,7 @@ $(document).ready(function(){
   eventListeners();
 });
 
+
 function eventListeners() {
   $(".button").on("click", function(){
     generateClicks += 1;
@@ -21,11 +22,3 @@ function eventListeners() {
         $(this).parent().remove();
   });
 }
-
-
-
-// Follow the steps below to complete the code challenge:
-//
-// Clicking a Swap <button> should change its parent background-color from Red to Yellow.
-//
-// Clicking a Delete <button> should remove its parent <div> container (and all of its contents).

@@ -8,8 +8,8 @@ $(document).ready(function(){
 function eventListeners() {
   $(".button").on("click", function(){
     generateClicks += 1;
-    $(".container").append("<div class='red'><p>Clicks =" + generateClicks + "</div>");
-
+    $(".container").append("<div class='red'><p>Clicks = " + generateClicks + "</div>");
+    $(".container").first().append("<button id='swap'>Swap</button><button id='delete'>Delete</button>");
   });
 
   //sets up delete button listener

@@ -1,3 +1,5 @@
+var generateClicks = 0;
+
 $(document).ready(function(){
   console.log("Let's do this!");
   eventListeners();
@@ -5,16 +7,20 @@ $(document).ready(function(){
 
 function eventListeners() {
   $(".button").on("click", function(){
-    $(".container").append("<div class='red'></div>");
+    generateClicks += 1;
+    $(".container").append("<div class='red'><p>Clicks =" + generateClicks + "</div>");
+
   });
 
+  //sets up delete button listener
+  $(".container").on("click", "#delete", function(){
+        $(this).parent.remove(); //remove parent?
+  });
 }
 
 
 
 // Follow the steps below to complete the code challenge:
-//
-// Inside the <div> element you created in the previous step, create a <p> element that shows how many times you have clicked the button from the first step.
 //
 // Inside the <div> element you created in step two, append two <button> elements. The text of the two buttons should read Swap and Delete.
 //
